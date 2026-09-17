@@ -2,11 +2,13 @@
 
 Sample source for Fiuu Tap-on-Phone (ToP).
 
-This public repo is a **reference app**: it shows how to call the ToP wrapper (amount entry, tap sale, PIN, signature, void). The library binaries are not published here. After you register with Fiuu, you get a zip of those libraries and drop them into `app/libs/`.
+This public repo is a **reference app**: it shows how to call the ToP wrapper (amount entry, tap sale, PIN, signature, void). The `.aar` and `.jar` libraries are provided by Fiuu after you register; they are not in this repo. Copy them into `app/libs/` before you build.
 
 Build this tester on a real NFC device with **your** App ID and credentials. When a tap sale works here, you can apply the same flow in your own merchant app.
 
 ## Libraries
+
+The `.aar` and `.jar` files are provided by Fiuu. They are not in this public repo.
 
 The Gradle build reads these files from `app/libs/`:
 
@@ -18,7 +20,7 @@ app/libs/
   filter-ssmobile.jar
 ```
 
-They are delivered as one zip after registration. Extract the zip, then copy the `.aar` and `.jar` files into `app/libs/`:
+Fiuu sends these as a zip after registration. Extract the zip, then copy the `.aar` and `.jar` files into `app/libs/`:
 
 ```bash
 unzip fiuu-top-libs.zip -d /tmp/top-libs
@@ -45,7 +47,7 @@ Amounts are Malaysian Ringgit. The keypad stores cents (max `99999.99`). The SDK
 - Android Studio with AGP 8.6 and Gradle 8.9 (JDK 17)
 - Physical Android device, API 29+
 - NFC enabled (emulator is not useful for tap)
-- The library zip from Fiuu (after registration)
+- The `.aar` and `.jar` libraries provided by Fiuu (after registration)
 - Your ToP credentials
 - A keystore whose cert matches the App ID you are testing
 
@@ -60,7 +62,7 @@ cd Tap-on-Phone
 
 ### 1. Libraries
 
-Extract the Fiuu zip and copy the `.aar` / `.jar` files into `app/libs/` (see [Libraries](#libraries)).
+Copy the `.aar` and `.jar` files provided by Fiuu into `app/libs/` (see [Libraries](#libraries)).
 
 ### 2. Credentials
 

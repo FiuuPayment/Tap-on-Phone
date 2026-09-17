@@ -123,4 +123,4 @@ app/src/main/java/com/fiuu/toppayment/
   DevLog*.java               On-screen SDK log panel
 ```
 
-Country is fixed to `MY`. Debug builds run the SDK in non-production mode; release builds set production mode.
+Debug builds run the SDK in non-production mode; release builds set production mode.
